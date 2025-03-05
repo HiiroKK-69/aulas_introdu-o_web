@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tarefa1</title>
+</head>
+<body class="dark">
+    <h1>Good Night World</h1>
+    <p>aqui temos uma bela imagem de um ator incrivel.</p>
+    <h1>WILLIAN DEFOE</h1>
+    <h3>clique na imagem a baixo</h3>
+
+    <button id="playButton">Play</button>
+    
+    <div class="container">
+        <div class="image-container">
+            <img src="img/relampago-raios-300x300.png" alt="relampago" class="piscar">
+        </div>
+        <div class="image-container">
+            <img src="img/poltrona-williem-homem-aranha-3.jpg" alt="WILLIAN DEFOE" width="500px">
+        </div>
+        <div class="image-container">
+            <img src="img/relampago-raios-300x300.png" alt="relampago" class="piscar inverte">
+        </div>
+    </div>
+
+    <script>
+        const audio = new Audio('snd/Elevator Music (Kevin MacLeod) - Background Music (HD).mp3');
+        audio.loop = true;
+        audio.volume = 0.05;
+
+        const playButton = document.getElementById('playButton');
+        playButton.addEventListener('click', () => {
+            if (audio.paused) {
+                audio.play();
+                playButton.textContent = 'Pause';
+            } else {
+                audio.pause();
+                playButton.textContent = 'Play';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+*{
+    font-family: 'Courier New';
+}
+
+p{
+    color: #ff0095;
+    text-align: center;
+    text-decoration:overline dotted;
+}
+h1{
+    color: #ff00f2;
+    text-align: center;
+    text-decoration: line-through;
+}
+h3{
+    color: #8a2be2;
+    text-align: center;
+    text-decoration: underline overline wavy;
+}
