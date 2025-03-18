@@ -1,0 +1,79 @@
+body{
+    color: white;
+    font-family:cursive ;
+    background-color: #00300a;
+    background-image: url(/assets/texture.png);
+    background-size: cover;
+
+    margin: 0;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+    margin-top: 0;
+}
+a{
+    color: #ffffff;
+    text-decoration:none;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    width: 40px;
+    height: 40px;
+    transition: heigth  0.3s ease, width 0.3s ease;
+
+}
+footer img:hover
+{
+    width: 45px;
+    height: 45px;
+}
+footer a{
+    margin: 20px;
+    text-align: center;
+}
+footer p{
+    margin-top: 2px;
+}
+nav{
+    background-color: #004b07;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-left-radius: 69px;
+    border-bottom-right-radius: 69px;
+}
+nav a {
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ff1a;
+    font-size: 20px; 
+    cursor: pointer;
+}
+section {
+    background-color: #491428;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25PX;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+}
+
+.container{
+    padding: 0px 69px;
+    padding-top: 0;
+}
+.center{
+    text-align: center;
+}
