@@ -1,0 +1,116 @@
+body{
+    color: white;
+    font-family:cursive ;
+    background-color: #00300a;
+    background-image: url(/assets/texture.png);
+    background-size: cover;
+
+    margin: 0;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+    margin-top: 0;
+}
+a{
+    color: #ffffff;
+    text-decoration:none;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer img{
+    width: 40px;
+    height: 40px;
+    transition: heigth  0.3s ease, width 0.3s ease;
+
+}
+footer img:hover
+{
+    width: 45px;
+    height: 45px;
+}
+footer a{
+    margin: 20px;
+    text-align: center;
+}
+footer p{
+    margin-top: 2px;
+}
+nav{
+    background-color: #004b07;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-bottom-left-radius: 69px;
+    border-bottom-right-radius: 69px;
+}
+nav a {
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.3s ease, font-size 0.3s ease;
+}
+
+nav a:hover {
+    color: #00ff1a;
+    font-size: 20px; 
+    cursor: pointer;
+}
+section {
+    background-color: #491428;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 25PX;
+    padding-top: 2px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+}
+p{
+    padding: 1%;
+}
+form{
+    padding-left: 5%;
+    padding-right: 10%;
+
+}
+input, textarea{
+    text-align: left;
+    background-color: #ade789;
+    color: #000000;
+    height: 30px;
+    width: 100%;
+    padding-left: 10px;
+    border-radius: 10px;
+    border: 2px solid #ff0051;
+}
+textarea{
+    height: 69px;
+}
+button{
+    font-family: cursive;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+    height: 30px;
+    background-color: #95ea61;
+    border: 2px solid #ff0051;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease, font-size 0.3s ease;
+}
+button:hover {
+    background-color: #3ced45;
+    box-shadow: 0px 0px 20px #ff0040;
+}
+.container{
+    padding: 0px 69px;
+    padding-top: 0;
+}
+.center{
+    text-align: center;
+}
