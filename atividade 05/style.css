@@ -1,0 +1,140 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-image: url(assets/background.jpg);
+    background-size: cover;
+}
+
+.azul{
+    color: #00b7ff;
+}
+.laranja{
+    color: #ffc354;
+}
+.branco{
+    color: #ffffff;
+}
+
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #01849b88;
+    border-bottom-right-radius:30%;
+    border-bottom-left-radius:30%;
+}
+.container div{
+    padding-left: 10%;
+}
+.container nav{
+    padding-right: 10%;
+}
+
+
+.container2{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 55%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    width: 90px;
+    height: 90px;
+    margin-right: 10px;
+    border-radius: 10%;
+}
+
+.nav{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+}
+
+.nav a{
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.nav a:hover{
+    color: #ff008c;
+}
+
+main{
+    padding: 50px 20px;
+
+}
+
+.content{
+    padding: 10px;
+    background-color: #74376b73;
+    border-radius: 40px;
+}
+
+.content h1{
+    font-size: 40px;
+}
+.content h1 span{
+    color: #00b7ff;
+}
+
+.content p{
+    color: #9df8f4;
+}
+
+.form-group{
+    margin-top: 20px;
+}
+.form-group input{
+    padding: 15px;
+    background-color: #2e2e3a;
+    color: #fff;
+    border-radius: 30px;
+    border: 2px solid #333;
+    width: 70%;
+}
+.form-group button{
+    padding: 15px 40px;
+    background-color: #ff7b54;
+    color: #fff;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.form-group button:hover{
+    background-color: #c95f19;
+}
+
+.image-container{
+    max-width: 40%;
+    position: relative;
+    padding-right: 100px;
+}
+
+.image-container img {
+    width: 240%;
+    border-radius: 20px;
+}
+.ellipse{
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ff006a, #00f7ffa1);
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    z-index: -1;
+}
+
