@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clique no botao</title>
+    <style>
+        #background{
+            transition: background-color 0.5s ease;
+            background-size: cover;
+
+        }
+        header{
+            text-align: center;
+        
+        }
+        
+        div{
+            display:flex ;
+            justify-content: center;
+            padding-top: 15%;
+        }
+        button{
+            padding: 15px 40px;
+            background-color: #00ff40;
+            color: #fff;
+            border-radius: 30px;
+            transition: 0.3s;
+            cursor: pointer;
+            color: #000000;
+        }
+        button:hover{
+            background-color: #20b834;
+        }
+    </style>
+
+</head>
+<body id="background">
+    <header>
+        <h1 >Clique abaixo para trocar a cor do fundo</h1>
+    </header>
+    <div >
+        <button id="button">CLIQUE AQUI</button>
+
+    </div>
+
+    <script>
+        let btn = document.querySelector('#button');
+        let bg = document.querySelector('#background');
+
+        btn.addEventListener('click', alt);
+
+        function alt(){
+            const letrasHex1 = '0123456789ABCDEF';
+            const letrasHex2 = '0123456789ABCDEF';
+            let corHex1 = '#';
+            let corHex2 = '#';
+
+            for (let i = 0; i < 6; i++)
+            {
+                corHex1 += letrasHex1[Math.floor(Math.random() * 16)];
+            }
+
+            for (let i = 0; i < 6; i++)
+            {
+                corHex2 += letrasHex2[Math.floor(Math.random() * 16)];
+            }
+
+            bg.style.background = `linear-gradient(90deg, ${corHex1}, ${corHex2})`;
+
+        }
+
+    </script>
+    
+</body>
+</html>

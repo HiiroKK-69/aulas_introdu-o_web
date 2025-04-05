@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom para dum dum para dum</title>
+    <style>
+        #area{
+            background-color: #03ff03;
+            color: #ffffff;
+            width: 200px;
+            height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div id="area">
+        interaja para surpresas
+    </div>
+
+    <script>
+        let a = document.querySelector("#area");
+        a.addEventListener("click", clicar);
+        a.addEventListener("mouseenter", entrar);
+        a.addEventListener("mouseout", sair);
+
+        function clicar(){
+            a.innerText = "CLICASTE";
+            a.style.background = "red";
+        }
+
+        function entrar(){
+            a.innerText = "PASSOU!";
+            a.style.background = "green";
+        }
+
+        function sair(){
+            a.innerText = "SAIU!";
+            a.style.background = "gray";
+        }
+
+    </script>
+    
+</body>
+</html>

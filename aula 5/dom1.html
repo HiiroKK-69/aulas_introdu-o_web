@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM  </title>
+</head>
+<body>
+    <h1 id="Tit1">
+        iniciando com DOM!
+    </h1>
+    <p class="parah">Aqui vai o resultado!</p>
+    <div id="msg">Uma mensagem</div>
+    <hr>
+
+    <script>
+        document.writeln(`Tchau Luiz`);
+        document.writeln(window.document.charset + "<br>");
+        document.writeln(window.navigator.appName + "<br>");
+        document.writeln(window.document.URL + "<br>");
+
+        document.getElementById('Tit1').innerText = "Mudei o Titulo";
+        document.getElementById('Tit1').style.color = "pink";
+
+        document.querySelector('p').style.color = "red";
+        document.querySelector('.parah').style.background = "pink";
+        document.querySelector('#msg').innerText = "Nova mensagem";
+
+        let novoParah = document.createElement('p');
+        novoParah.innerText = "Este é um novo paragrafo";
+        document.body.appendChild(novoParah);
+
+        let elemento = document.getElementById('Tit1');
+        elemento.remove();
+
+
+
+    </script>
+
+</body>
+</html>
