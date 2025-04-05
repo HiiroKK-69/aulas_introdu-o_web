@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>campo de entrada uuuuuuuuu👻👻👻👻👻👻</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            flex-direction: column; 
+            justify-content: center;
+            align-items: center; 
+            background-color: #3b0808;
+        }
+        h1{
+            color:#f0f8ff;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(218, 1, 73);
+            padding: 20px;
+            border-radius:40px ;
+        }
+        form div{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            padding: 20px;
+        }
+        #txt{
+            width: 300px;
+            height: 30px;
+            padding: 10px;
+            border: 2px solid #1eff00;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        input::placeholder {
+            color: #026c7494;
+            font-style: italic;
+        }
+        #btn{
+            padding: 15px 40px;
+            background-color: #00ff40;
+            color: #fff;
+            border-radius: 30px;
+            transition: 0.3s;
+            cursor: pointer;
+            color: #000000;
+            
+        }
+        #btn:hover{
+            background-color: #20b834;
+
+        }
+        #result{
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>insira um texto ai meu lindo/a</h1>
+    </header>
+    <div class="container">
+        <form>
+            <div>
+                <input type="text" placeholder="insira Texto"  id="txt">
+            </div>
+            <div>
+            <input type="button" value="RECEBA" id="btn">
+            </div>
+            <div>
+                <p id="result"></p>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        let btn  = document.querySelector('#btn');
+        let res  = document.querySelector('#result');  
+
+        btn.addEventListener('click', send)
+
+        function send()
+        {
+            let text = document.querySelector('#txt').value;
+
+            res.innerText = `${text}`;
+        }
+
+    </script>
+
+</body>
+</html>
