@@ -1,0 +1,33 @@
+body { 
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    background: linear-gradient(90deg, #000000, #750031, #000000);
+}
+section { 
+    background: linear-gradient(90deg, #3b3b3b, #252525, #3b3b3b);
+    padding: 15px; 
+    margin-bottom: 20px; 
+    border-radius: 30px; 
+    box-shadow: 0px 0px 30px #9900ff46; 
+}
+h1, h2{
+    color: #f0f8ff;
+}
+
+input, button {
+     margin: 5px 0; 
+     padding: 8px; 
+     font-size: 14px; 
+     border-radius: 30px;
+     border-color: #ff0055 ;
+     background-color: #471224;
+     color: #f0f8ff;
+}
+ul { 
+    list-style-type: none;
+    padding-left: 0; 
+}
+li{
+    color: #f0f8ff;
+    font-family: cursive;
+}

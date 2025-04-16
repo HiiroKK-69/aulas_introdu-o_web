@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade 08</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1>JavaScript Interativo</h1>
+
+    <section>
+        <h2>Array e For</h2>
+        <input type="text" id="nomeLista" placeholder="Adicionar nome à lista">
+        <button id="btAdicionarNome">Receba</button>
+        <button id="btRemoverNome">Remover item</button>
+        <button id="btApagarLista">Apagar lista</button>
+        <ul id="listaNomes"></ul>
+    </section>
+
+    <script>
+        // Eventos de "Escuta"
+
+        document.getElementById('btAdicionarNome').addEventListener('click', adicionarNome);
+        document.getElementById('btRemoverNome').addEventListener('click', ApagarNome);
+        document.getElementById('btApagarLista').addEventListener('click', RemoverLista);
+        let nomes = [];
+
+        function adicionarNome(){
+            let nome = document.getElementById('nomeLista').value;
+            if (nome){
+            nomes.push(nome);
+            document.getElementById('nomeLista').value=  "";
+
+            atualizarNomes();
+        }
+        }
+        function ApagarNome(){
+            nomes.pop();
+            atualizarNomes();
+
+        }
+
+        function RemoverLista(){
+            nomes.splice(0)
+            atualizarNomes();
+        
+        }
+
+        function atualizarNomes(){
+            let ul = document.getElementById('listaNomes');
+            ul.innerHTML = "";
+
+            nomes.forEach((n, i) => {
+                let li = document.createElement('li');
+                li.innerText = `${i}. ${n}`;
+                ul.appendChild(li);
+            })
+        }
+
+    </script>
+
+</body>
+</html>

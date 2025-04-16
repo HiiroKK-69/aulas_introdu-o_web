@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio Prático</title>
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+
+        body{
+            margin: 0px;
+            padding: 0px;
+            background-image: url(../assets/omnitrix.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        main{
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 20px; 
+            padding: 20px
+        }
+        #background{
+            transition: background-color 0.5s ease;
+            background-size: cover;
+
+        }
+        .container{
+        height: 500px;
+        width: 400px;
+        background-color: #910043bd;
+        border-style: dashed;
+        border-radius: 40px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        }
+        .container > *:not(.font) {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+        }
+        .font{
+        margin: 0;
+        padding-top: 10px;
+        font-size: 65px;
+        font-family: "Tiny5";
+        text-decoration: none;
+        color: #fbff00;
+        align-self: center;
+        }
+        button, input[type="button"], input[type="submit"]{
+            padding: 15px 40px;
+            background-color: #00ff40;
+            color: #fff;
+            border-radius: 30px;
+            transition: 0.3s;
+            cursor: pointer;
+            color: #000000;
+            height: 50px;
+            width: 325px;
+        }
+        button:hover,input[type="button"],input[type="submit"]:hover{
+            background-color: #20b834;
+        }
+        form div{
+            display: flex;
+            justify-content: center;
+            align-items: center; 
+            padding: 20px;
+        }
+        #txt, input[type="text"]{
+            width: 300px;
+            height: 30px;
+            padding: 10px;
+            border: 2px solid #1eff00;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+        input::placeholder {
+            color: #026c7494;
+            font-style: italic;
+        }
+        p{
+            font-size: 25px;
+            padding-bottom: 30px;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        h3{
+            text-align: center;
+            font-size: 25px;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        .form{
+            margin: auto;
+            flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+        }
+        .align{
+            align-items: center;
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <main>
+
+        <div class="container" id="background">
+            <h1 class="font">Questão 6</h1>
+            <div class="align">
+                <button id="button" class="align">CLIQUE AQUI</button>
+            </div>
+
+        </div>
+
+        <div class="container">
+            <h1 class="font">Questão 7</h1>
+            <form>
+                <div>
+                    <input type="text" placeholder="insira Texto"  id="txt">
+                </div>
+                <div>
+                <input type="button" value="RECEBA" id="btn">
+                </div>
+                <div>
+                    <p id="result"></p>
+                </div>
+            </form>
+        </div>
+
+        <div class="container">
+            <h1 class="font">Questão 8</h1>
+            <form class="align">
+                <input type="button" value="+" id="btn1">
+                <h3 id="resultado"></h3>
+                <input type="button" value="-" id="btn2">
+            </form>
+        </div>
+
+        <div class="container" id="bg">
+            <h1 class="font">Questão 9</h1>
+            <form class="align">
+            <input type="text" placeholder="Ex: red, #ff0000, rgb(255,0,0)" id="color1">
+            <br>
+            <br>
+            <input type="text" placeholder="Ex: red, #ff0000, rgb(255,0,0)" id="color2">
+            <p>Aperte ENTER</p>
+            </form>
+        </div>
+
+        <div class="container">
+            <h1 class="font">Questão 10</h1>
+            <form id="meuForm" class="form align">
+                <input type="text" placeholder="Nome..." id="name">
+                <br>
+                <input type="text" placeholder="Email..." id="email">
+                <br>
+                <input type="text" placeholder="Mensagem..." id="msg">
+                <br>
+                <input type="submit" value="Enviar" id="button">
+            </form>
+        </div>
+
+        <div class="container">
+            <h1 class="font">Questão 10</h1>
+            <div>
+                <p id="namef">Nome: <br></p>
+                <p id="emailf">Email: <br></p>
+                <p id="msgf">Mensagem: <br></p>
+            </div>
+
+        </div>
+    </main>
+    <script>
+        //questao6
+        let btn = document.querySelector('#button');
+        let bg = document.querySelector('#background');
+
+        btn.addEventListener('click', alt);
+
+        function alt(){
+            const letrasHex1 = '0123456789ABCDEF';
+            const letrasHex2 = '0123456789ABCDEF';
+            let corHex1 = '#';
+            let corHex2 = '#';
+
+            for (let i = 0; i < 6; i++)
+            {
+                corHex1 += letrasHex1[Math.floor(Math.random() * 16)];
+            }
+
+            for (let i = 0; i < 6; i++)
+            {
+                corHex2 += letrasHex2[Math.floor(Math.random() * 16)];
+            }
+
+            bg.style.background = `linear-gradient(90deg, ${corHex1}, ${corHex2})`;
+
+        }
+        //questao7
+        let Button  = document.querySelector('#btn');
+        let res     = document.querySelector('#result');  
+
+        Button.addEventListener('click', send)
+
+        function send()
+        {
+            let text = document.querySelector('#txt').value;
+
+            res.innerText = `${text}`;
+        }
+        //questao8
+        let mais  = document.querySelector('#btn1');
+        let menos = document.querySelector('#btn2');
+        let num = Number(0);
+
+        mais.addEventListener('click', plus);
+        menos.addEventListener('click', minus);
+        
+
+        function plus()
+        {
+            let res = document.querySelector('#resultado');
+            num += 1;
+
+            res.innerText = `${num}`;
+        }
+
+        function minus()
+        {
+            let res = document.querySelector('#resultado');
+            num = num - 1;
+
+            res.innerText = `${num}`;
+        }
+        //questao9
+        let cor1 = document.querySelector('#color1');
+        let cor2 = document.querySelector('#color2');
+        let bckgrn = document.querySelector('#bg');
+
+        cor1.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter'){
+                bckgrn.style.background = `linear-gradient(90deg, ${cor1.value}, ${cor2.value})`;
+        }
+        }) 
+        cor2.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter'){
+                bckgrn.style.background = `linear-gradient(90deg, ${cor1.value}, ${cor2.value})`;
+        }
+        }) 
+        //questao10
+        const form = document.querySelector('#meuForm');
+        const nameInput = document.querySelector('#name');
+        const emailInput = document.querySelector('#email');
+        const msgInput = document.querySelector('#msg');
+        
+        const nameDisplay = document.querySelector('#namef');
+        const emailDisplay = document.querySelector('#emailf');
+        const msgDisplay = document.querySelector('#msgf');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            
+            const nome = nameInput.value;
+            const email = emailInput.value;
+            const mensagem = msgInput.value;
+            
+            nameDisplay.innerHTML = `Nome: <br>${nome}`;
+            emailDisplay.innerHTML = `Email: <br>${email}`;
+            msgDisplay.innerHTML = `Mensagem: <br>${mensagem}`;
+            
+            form.reset();
+        });
+
+
+
+    </script>
+
+
+</body>
+</html>
