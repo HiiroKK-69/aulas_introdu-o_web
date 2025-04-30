@@ -1,0 +1,235 @@
+body {
+    font-family: 'Libre Baskerville', cursive;
+    text-align: center;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    transition: all 0.5s ease;
+}
+
+.container {
+    width: 50%;
+    height: 30%;
+    padding: 30px;
+    border-radius: 15px;
+    border: 30px solid transparent;
+    transition: all 0.5s ease;
+    transform: rotate(360deg);
+
+}
+.container:hover{
+    transform: rotate(180deg);
+    filter: invert(1)
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+    transition: all 0.5s ease;
+}
+
+#toggle-theme img {
+    margin-bottom: 30px; 
+    width: 69px;
+    cursor: pointer;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    align-items: center;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+button {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    height: 40px;
+    transition: all 0.3s ease;
+}
+
+.task-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* ===== TEMA CLARO ===== */
+body.light-mode {
+    background: radial-gradient(circle at center, #f8f8ec 0%, #e5e6c9 100%);
+}
+
+body.light-mode h1 {
+    color: #8ba6ac;
+}
+
+body.light-mode .container {
+    background-color: #f8f8ec;
+    color: #8ba6ac;
+    border: 1px solid #bdcdd0;
+}
+
+body.light-mode #task-input {
+    background-color: #f8f8ec;
+    color: #5a6d72;
+    border: 1px solid #8ba6ac;
+}
+
+body.light-mode button {
+    color: #8ba6ac;
+}
+
+body.light-mode button:hover,
+body.light-mode #add-task:hover {
+    color: #5a6d72;
+    background-color: #e5e6c9;
+}
+
+body.light-mode li {
+    background-color: #e5e6c9;
+    color: #5a6d72;
+    border: 1px solid #bdcdd0;
+}
+
+body.light-mode li.completed {
+    color: #8ba6ac;
+    text-decoration: line-through;
+    background-color: #d7d7b8;
+}
+
+body.light-mode .edit img {
+    content: url("Assets/lapis-light.png");
+}
+
+body.light-mode .delete img {
+    content: url("Assets/lata-de-lixo-light.png");
+}
+
+/* ===== TEMA ESCURO ===== */
+body.dark-mode {
+    background: radial-gradient(circle at center, #0a0310 0%, #1a0033 100%);
+}
+
+body.dark-mode h1 {
+    color: #ffb238;
+}
+
+body.dark-mode .container {
+    background-color: #160028;
+    color: #ffb238;
+    border: 1px solid #ff7d10;
+}
+
+body.dark-mode #task-input {
+    background-color: #160028;
+    color: #ffb238;
+    border: 1px solid #ff7d10;
+}
+
+body.dark-mode button {
+    color: #ffb238;
+}
+
+body.dark-mode button:hover,
+body.dark-mode #add-task:hover {
+    color: #ffffff;
+    background-color: #49007e;
+}
+
+body.dark-mode li {
+    background-color: #49007e;
+    color: #ffb238;
+    border: 1px solid #ff005b;
+}
+
+body.dark-mode li.completed {
+    color: #ff7d10;
+    text-decoration: line-through;
+}
+
+body.dark-mode .edit img {
+    content: url("Assets/lapis-dark.png");
+}
+
+body.dark-mode .delete img {
+    content: url("Assets/lata-de-lixo-dark.png");
+}
+
+/* ===== ELEMENTOS COMUNS ===== */
+.btnTasks {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+button.edit,
+button.delete {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+button.edit img,
+button.delete img {
+    width: 18px;  
+    height: 18px;
+}
+
+button.edit:hover,
+button.delete:hover {
+    background-color: transparent !important;
+    transform: none !important;
+}
+
+.hidden {
+    display: none;
+}
+
+img {
+    width: 150px;
+    border-radius: 90px;
+}
