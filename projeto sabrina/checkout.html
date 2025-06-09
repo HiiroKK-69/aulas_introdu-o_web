@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra - TechStore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>TechStore - Checkout</h1>
+    </header>
+    
+    <main class="checkout-container">
+        <form id="checkout-form" class="checkout-form">
+            <h2>Informações de Pagamento</h2>
+            
+            <div class="form-group">
+                <label for="fullname">Nome Completo</label>
+                <input type="text" id="fullname" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="address">Endereço</label>
+                <input type="text" id="address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="card">Número do Cartão</label>
+                <input type="text" id="card" placeholder="0000 0000 0000 0000" required>
+            </div>
+            
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="expiry">Validade</label>
+                    <input type="text" id="expiry" placeholder="MM/AA" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Confirmar Compra</button>
+        </form>
+        
+        <div class="order-summary">
+            <h2>Resumo do Pedido</h2>
+            <ul id="checkout-items"></ul>
+            <div class="summary-total">
+                <p>Total: R$ <span id="checkout-total">0.00</span></p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // CARREGA OS DADOS DO CARRINHO SE TIVER
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const total = localStorage.getItem('cartTotal') || '0.00';
+        
+        document.getElementById('checkout-total').textContent = total;
+        
+        const checkoutItems = document.getElementById('checkout-items');
+        const groupedItems = {};
+        
+        // AGRUPA POR ID
+        cart.forEach(item => {
+            if (!groupedItems[item.id]) {
+                groupedItems[item.id] = { ...item, quantity: 0 };
+            }
+            groupedItems[item.id].quantity++;
+        });
+        
+        // EXIBE OS ITENS AGRUPADOS
+        Object.values(groupedItems).forEach(item => {
+            const li = document.createElement('li');
+            li.innerHTML = `
+                <span class="item-name">${item.name} (${item.quantity}x)</span>
+                <span class="item-price">R$ ${(item.price * item.quantity).toFixed(2)}</span>
+            `;
+            checkoutItems.appendChild(li);
+        });
+        
+        // PROCESSANDO O FORM
+        document.getElementById('checkout-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // MATRIX(SIMULAÇAO) DA COMPRA
+            setTimeout(() => {
+                alert('Compra realizada com sucesso! Obrigado por comprar na TechStore.');
+                localStorage.removeItem('cart');
+                localStorage.removeItem('cartTotal');
+                window.location.href = 'index.html';
+            }, 1000);
+        });
+    </script>
+</body>
+</html>

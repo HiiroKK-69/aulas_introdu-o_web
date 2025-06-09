@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - E-commerce</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>TechStore</h1>
+        <button id="cart-icon" class="shake">
+            🛒 <span id="cart-count">0</span>
+        </button>
+    </header>
+    
+    <main>
+        <section class="products">
+            <!-- Produtos via java pra facilitar -->
+        </section>
+    </main>
+
+    <!-- Carrinho vruuuuuuuuuuuuuuuuuuuuuum-->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Seu Carrinho</h2>
+            
+            <div class="coupon">
+                <input type="text" id="coupon-code" placeholder="Cupom de desconto">
+                <button onclick="applyCoupon()">Aplicar</button>
+            </div>
+            
+            <ul id="cart-items"></ul>
+            
+            <div class="cart-summary">
+                <p>Subtotal: R$ <span id="subtotal">0.00</span></p>
+                <p>Desconto: R$ <span id="discount">0.00</span></p>
+                <p class="total">Total: R$ <span id="cart-total">0.00</span></p>
+            </div>
+            
+            <button id="clear-cart">Limpar Carrinho</button>
+            <a href="checkout.html" id="checkout-btn">Finalizar Compra</a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
